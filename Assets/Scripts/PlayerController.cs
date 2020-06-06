@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
 
-    float verticalDelta = 0;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
         float move;
         if (Application.platform == RuntimePlatform.Android)
         {
-            move = Input.acceleration.x;           
+            move = Input.acceleration.x * 2;           
             Movement(move);            
         }
         else
@@ -81,10 +80,10 @@ public class PlayerController : MonoBehaviour
 
     void Falling()
     {
-        verticalDelta += transform.position.y;
-        if (verticalDelta > 0)
+        float verticalSpeed = rb.velocity.y;
+        if (verticalSpeed > 0)
             anim.SetBool("fallingUp", true);
-        else if (verticalDelta < 0)
+        else if (verticalSpeed < 0)
             anim.SetBool("fallingUp", false);
     }
 }

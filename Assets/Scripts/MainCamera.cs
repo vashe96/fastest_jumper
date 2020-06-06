@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainCamera : MonoBehaviour
 {
     public Transform target;
-    public float smoothing = 5f;
+    public float smoothing = 2f;
 
     Vector3 offset;
     void Start()

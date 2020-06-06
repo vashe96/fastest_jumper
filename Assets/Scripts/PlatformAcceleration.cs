@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlatformAcceleration : MonoBehaviour
 {
-    public PlayerController player;
+    GameObject player;
     public string type;
 
     Rigidbody playerRB;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player"); 
         playerRB = player.GetComponent<Rigidbody>();        
     }
 
@@ -17,7 +18,18 @@ public class PlatformAcceleration : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            playerRB.velocity = new Vector3(0, 30, 0);
+            switch (type)
+            {
+                case "fast":
+                    playerRB.velocity = new Vector3(0, 30, 0);
+                    break;
+                case "medium":
+                    playerRB.velocity = new Vector3(0, 25, 0);
+                    break;
+                case "slow":
+                    playerRB.velocity = new Vector3(0, 20, 0);
+                    break;
+            }            
         }
     }   
 }

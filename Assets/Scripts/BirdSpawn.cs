@@ -11,12 +11,11 @@ public class BirdSpawn : MonoBehaviour
     {
         spawnPosition = transform.position;
         GameObject clone = (GameObject)Instantiate(birdPrefab, spawnPosition, Quaternion.Euler(0f, 180f, 0f));
-        Destroy(clone, 10.0f);
+        Destroy(clone, 8.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

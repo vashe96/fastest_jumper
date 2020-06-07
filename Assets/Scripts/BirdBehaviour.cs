@@ -5,19 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class BirdBehaviour : MonoBehaviour
 {
-    public GameObject canvas;
+    GameObject deathCanvas;
 
+    private void Start()
+    {
+        deathCanvas = GameObject.Find("DeathTrigger");
+    }
     void Update()
     {
-        float speed = Random.Range(15f, 20f);
-        float targetRandom = Random.Range(0f, 2f);
-
-        Vector3 targetDelta = new Vector3(0, 0, -60);
-        transform.position = Vector3.MoveTowards(transform.position, targetDelta, speed * Time.deltaTime);
+        float speed = Random.Range(7f, 12f);
+        transform.position += transform.forward * Time.deltaTime * speed;        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        canvas.SetActive(true);
+        deathCanvas.GetComponent<Death>().DoDeath();
     }
 }

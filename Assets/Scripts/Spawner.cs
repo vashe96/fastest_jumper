@@ -23,6 +23,6 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         GameObject clone = (GameObject)Instantiate(birdPrefab, spawn.transform.position, Quaternion.Euler(0f, 180f, 0f));
-        Destroy(clone, 8.0f);
+        Destroy(clone, 12.0f);
     }
 }

@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BirdBehaviour : MonoBehaviour
 {
-    void Start()
-    {
-    }
+    public GameObject canvas;
 
     void Update()
     {
@@ -18,7 +16,6 @@ public class BirdBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Death death = new Death();
-        death.DoDeath();
+        canvas.SetActive(true);
     }
 }

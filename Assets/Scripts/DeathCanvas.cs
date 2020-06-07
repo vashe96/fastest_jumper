@@ -5,12 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class DeathCanvas : MonoBehaviour
 {
-    Death death;
     string currentScene;
+
+    GameObject player;
+    PlayerController spawn;
+    public GameObject mainCanvas;
+    public GameObject canvas;
+
     private void Awake()
     {
-        death = new Death();
         currentScene = SceneManager.GetActiveScene().name;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        spawn = player.GetComponent<PlayerController>();
     }
     public void Restart()
     {
@@ -22,7 +29,9 @@ public class DeathCanvas : MonoBehaviour
     }
     public void Ads()
     {
-        death.DoDeath();
+        mainCanvas.SetActive(true);
+        canvas.SetActive(false);
+        player.transform.position = spawn.spawnPoint;
     }          
         
 }

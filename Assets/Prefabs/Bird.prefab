@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69915d72295e942b9c3348824e7823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1981351629586854241, guid: 9934c46a83be30c48bb770a5df69a8c1, type: 3}
 --- !u!135 &3031722340355819568
 SphereCollider:
   m_ObjectHideFlags: 0

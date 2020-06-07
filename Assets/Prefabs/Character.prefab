@@ -1650,6 +1650,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 3873184108876825266}
+  spawnPoint: {x: 0, y: 360, z: 0}
 --- !u!135 &5545651679808487343
 SphereCollider:
   m_ObjectHideFlags: 0

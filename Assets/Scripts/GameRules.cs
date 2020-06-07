@@ -14,7 +14,7 @@ public class GameRules : MonoBehaviour
 
     void Start()
     {
-        levelDistance = finish.transform.position.x - start.transform.position.x - 3f;        
+        levelDistance = finish.transform.position.x - start.transform.position.x;        
     }
 
     void Update()

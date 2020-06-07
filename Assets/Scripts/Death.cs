@@ -7,22 +7,28 @@ public class Death : MonoBehaviour
 {
     GameObject player;
     PlayerController spawn;
+    public GameObject mainCanvas;
     public GameObject canvas;
 
-    DeathCanvas deathCanvas;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         spawn = player.GetComponent<PlayerController>();
-        deathCanvas = new DeathCanvas();
     }
     private void OnTriggerEnter(Collider other)
     {
-        canvas.SetActive(true);
+        DoDeath();
     }
 
     public void DoDeath()
     {
+        mainCanvas.SetActive(false);
+        canvas.SetActive(true);
+    }
+    public void AdWatched()
+    {
+        mainCanvas.SetActive(true);
+        canvas.SetActive(false);
         player.transform.position = spawn.spawnPoint;
     }
 }

@@ -6,11 +6,15 @@ public class MainCamera : MonoBehaviour
 {
     public Transform target;
     public float smoothing = 2f;
+    AudioSource audi;
 
     Vector3 offset;
     void Start()
     {
         offset = transform.position - target.position;
+        audi = GetComponent<AudioSource>();
+        if (PlayerPrefs.GetInt("audio") == 0)
+            audi.volume = 0;
     }
 
     void FixedUpdate()

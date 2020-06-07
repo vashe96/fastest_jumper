@@ -6,10 +6,18 @@ public class Spawner : MonoBehaviour
 {
     public GameObject spawn;
     public GameObject birdPrefab;
+    AudioSource audi;
 
+    private void Awake()
+    {
+        audi = GetComponent<AudioSource>();
+        if (PlayerPrefs.GetInt("audio") == 0)
+            audi.volume = 0;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Spawn();
+        audi.Play();
     }
 
     public void Spawn()

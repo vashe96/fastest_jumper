@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
 
     public Vector3 spawnPoint;
-
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -40,9 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             move = Input.GetAxis("Horizontal");
             Movement(move);
-        }
-        
-
+        }         
     }
 
     void Movement (float move)
@@ -52,8 +49,8 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("speed", Mathf.Abs(move));
         }
         
-        rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);
-
+        rb.velocity = new Vector3(move * speed, rb.velocity.y, 0);            
+        
         if (move > 0 && !facingRight)
             Flip();
         else if (move < 0 && facingRight)
@@ -97,5 +94,5 @@ public class PlayerController : MonoBehaviour
             spawnPoint = collision.transform.position + offset;
         }
     }
-    
+        
 }

@@ -12,8 +12,11 @@ public class DeathCanvas : MonoBehaviour
     public GameObject mainCanvas;
     public GameObject canvas;
 
+    Death death;
+
     private void Awake()
     {
+        death = gameObject.AddComponent<Death>();
         currentScene = SceneManager.GetActiveScene().name;
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -28,10 +31,11 @@ public class DeathCanvas : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     public void Ads()
-    {
+    {        
         mainCanvas.SetActive(true);
         canvas.SetActive(false);
         player.transform.position = spawn.spawnPoint;
+        death.AdWatched();
     }          
         
 }

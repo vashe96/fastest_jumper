@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.UIElements;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameRules : MonoBehaviour
@@ -14,13 +11,13 @@ public class GameRules : MonoBehaviour
 
     void Start()
     {
-        levelDistance = finish.transform.position.x - start.transform.position.x;        
+        levelDistance = (finish.transform.position.x - start.transform.position.x) / 100;        
     }
 
     void Update()
     {
-        currentPosition = player.transform.position.x - start.transform.position.x;
-        levelProgression = (int)(levelDistance / 100.0f * currentPosition * 2); //TODO check this
+        currentPosition = (player.transform.position.x - start.transform.position.x) / 100;
+        levelProgression = (int)(currentPosition / levelDistance * 100);
         progressLevel.value = levelProgression / 100.0f;
     }
 }

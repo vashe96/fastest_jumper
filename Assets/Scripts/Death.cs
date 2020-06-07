@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
+    GameObject player;
+    PlayerController spawn;
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        spawn = player.GetComponent<PlayerController>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         DoDeath();
@@ -12,6 +19,6 @@ public class Death : MonoBehaviour
 
     public void DoDeath()
     {
-        SceneManager.LoadScene(1); //TODO Death
+        player.transform.position = spawn.spawnPoint;
     }
 }

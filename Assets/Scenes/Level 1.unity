@@ -1620,6 +1620,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3873184108733478126, guid: f49066a4767d40b46af251d9a494a44d,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3873184108733478126, guid: f49066a4767d40b46af251d9a494a44d,
+        type: 3}
+      propertyPath: spawnPoint.y
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 5107571789959740431, guid: f49066a4767d40b46af251d9a494a44d,
         type: 3}
       propertyPath: m_Name

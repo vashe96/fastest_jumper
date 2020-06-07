@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
 
+    public Vector3 spawnPoint;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -86,4 +88,14 @@ public class PlayerController : MonoBehaviour
         else if (verticalSpeed < 0)
             anim.SetBool("fallingUp", false);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Platform"))
+        {
+            Vector3 offset = new Vector3(0, 10, 0);
+            spawnPoint = collision.transform.position + offset;
+        }
+    }
+    
 }

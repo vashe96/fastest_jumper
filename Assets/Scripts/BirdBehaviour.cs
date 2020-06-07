@@ -11,13 +11,14 @@ public class BirdBehaviour : MonoBehaviour
 
     void Update()
     {
-        float speed = Random.Range(5f, 10f);
+        float speed = Random.Range(10f, 15f);
         float targetRandom = Random.Range(0f, 2f);
         transform.position = Vector3.MoveTowards(transform.position, targetRandom * (new Vector3(11, 6, -30)), speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("SampleScene"); //TODO Death
+        Death death = new Death();
+        death.DoDeath();
     }
 }

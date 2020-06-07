@@ -7,6 +7,11 @@ public class Death : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        DoDeath();
+    }
+
+    public void DoDeath()
+    {
         SceneManager.LoadScene("SampleScene"); //TODO Death
     }
 }

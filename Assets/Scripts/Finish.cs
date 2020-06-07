@@ -16,7 +16,7 @@ public class Finish : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(1);
         }
     }
 }

@@ -12,6 +12,6 @@ public class Death : MonoBehaviour
 
     public void DoDeath()
     {
-        SceneManager.LoadScene("SampleScene"); //TODO Death
+        SceneManager.LoadScene(1); //TODO Death
     }
 }

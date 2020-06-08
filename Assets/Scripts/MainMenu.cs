@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Button soundButton;
+
+    public Sprite On;
+    public Sprite Off;
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("LevelPassed"));
-        if (PlayerPrefs.GetInt("audio") == 0)
-            ;
-        else;
+        ChangeButton();
     }
     public void PlayGame()
     {
@@ -23,5 +25,13 @@ public class MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("audio", 1);
         else
             PlayerPrefs.SetInt("audio", 0);
+    }
+
+    void ChangeButton()
+    {
+        if (PlayerPrefs.GetInt("audio") == 0)
+            soundButton.GetComponent<Image>().sprite = Off;
+        else
+            soundButton.GetComponent<Image>().sprite = On;
     }
 }

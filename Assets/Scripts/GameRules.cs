@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameRules : MonoBehaviour
@@ -9,21 +10,18 @@ public class GameRules : MonoBehaviour
 
     public Slider progressLevel;
     GameObject adsController;
-    GameObject deathTrigger;
 
     void Start()
     {
-        deathTrigger = GameObject.Find("DeathTrigger");
         adsController = GameObject.Find("AdsController");
-
-        CheckBackButton();
+        
         //PlayAd();
         levelDistance = (finish.transform.position.x - start.transform.position.x) / 100;        
     }
 
     void Update()
-    {   
-        
+    {
+        CheckBackButton();
         currentPosition = (player.transform.position.x - start.transform.position.x) / 100;
         levelProgression = (int)(currentPosition / levelDistance * 100);
         progressLevel.value = levelProgression / 100.0f;
@@ -46,7 +44,7 @@ public class GameRules : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            deathTrigger.GetComponent<Death>().DoDeath();
+            SceneManager.LoadScene(1);
         }
     }
     

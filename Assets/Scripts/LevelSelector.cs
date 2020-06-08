@@ -10,7 +10,12 @@ public class LevelSelector : MonoBehaviour
     private void Start()
     {
         SetActiveButtons();
-    }   
+    }
+
+    private void Update()
+    {
+        CheckBackButton();
+    }
 
     public void SetFirstLevel()
     {
@@ -85,5 +90,13 @@ public class LevelSelector : MonoBehaviour
             button11.interactable = true;
         if (PlayerPrefs.GetInt("LevelPassed") > 10)
             button12.interactable = true;
+    }
+
+    void CheckBackButton()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DeathCanvas : MonoBehaviour
 {
@@ -12,8 +13,16 @@ public class DeathCanvas : MonoBehaviour
     public GameObject mainCanvas;
     public GameObject canvas;
 
+    
+
     Death death;
     GameObject adsController;
+
+    public Button ads;
+    public Sprite On;
+    public Sprite Off;
+
+    bool adReady;
 
     private void Awake()
     {
@@ -23,6 +32,22 @@ public class DeathCanvas : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         spawn = player.GetComponent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        //adReady = adsController.GetComponent<Ads>().isRewardedVideoReady(); //TODO!!
+        adReady = true;
+        if (adReady)
+        { 
+            ads.interactable = true;
+            ads.GetComponent<Image>().sprite = On;
+        }
+        else
+        {
+            ads.GetComponent<Image>().sprite = Off;
+            ads.interactable = false;
+        }
     }
     public void Restart()
     {
@@ -35,8 +60,7 @@ public class DeathCanvas : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     public void Ads()
-    {        
-        //bool adReady = adsController.GetComponent<Ads>().isRewardedVideoReady();
+    {
         //if (adReady)
         //{
         //    adsController.GetComponent<Ads>().PlayRewardedVideoAd();

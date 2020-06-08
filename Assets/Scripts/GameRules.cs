@@ -9,18 +9,21 @@ public class GameRules : MonoBehaviour
 
     public Slider progressLevel;
     GameObject adsController;
+    GameObject deathTrigger;
 
     void Start()
-    {        
+    {
+        deathTrigger = GameObject.Find("DeathTrigger");
         adsController = GameObject.Find("AdsController");
-        PlayAd();
+
+        CheckBackButton();
+        //PlayAd();
         levelDistance = (finish.transform.position.x - start.transform.position.x) / 100;        
     }
 
     void Update()
-    {        
-        int a = PlayerPrefs.GetInt("Respawns");
-        Debug.Log(a.ToString());        
+    {   
+        
         currentPosition = (player.transform.position.x - start.transform.position.x) / 100;
         levelProgression = (int)(currentPosition / levelDistance * 100);
         progressLevel.value = levelProgression / 100.0f;
@@ -37,6 +40,14 @@ public class GameRules : MonoBehaviour
         int temp = PlayerPrefs.GetInt("Respawns");
         ++temp;
         PlayerPrefs.SetInt("Respawns", temp);
+    }
+
+    void CheckBackButton()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            deathTrigger.GetComponent<Death>().DoDeath();
+        }
     }
     
 }

@@ -17,7 +17,7 @@ public class Ads : MonoBehaviour, IUnityAdsListener
 
     private void InitializeAdvertisement()
     {
-        Advertisement.Initialize(playStoreId, true); //TODO remove
+        Advertisement.Initialize(playStoreId);
     }
 
     public bool isInterstitialReady()

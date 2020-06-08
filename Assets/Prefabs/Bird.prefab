@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7824012499530395675}
   - component: {fileID: -2637040409094695843}
   - component: {fileID: 3031722340355819568}
-  - component: {fileID: -1094185546185181682}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -67,7 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69915d72295e942b9c3348824e7823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1981351629586854241, guid: 9934c46a83be30c48bb770a5df69a8c1, type: 3}
 --- !u!135 &3031722340355819568
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -81,21 +79,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.069535375
   m_Center: {x: -0.024712885, y: 0.047515143, z: -0.012409568}
---- !u!114 &-1094185546185181682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7824012499520897633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a106c4d13832eb44b172adbd84d503b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 8709194196933515498, guid: 7ccd2f634c56e1b4a8e00d6507e2d394,
-    type: 3}
-  canvas: {fileID: 1981351629586854241, guid: 9934c46a83be30c48bb770a5df69a8c1, type: 3}
 --- !u!1 &7824012499520897635
 GameObject:
   m_ObjectHideFlags: 0

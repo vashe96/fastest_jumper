@@ -15,7 +15,7 @@ public class GameRules : MonoBehaviour
     {
         adsController = GameObject.Find("AdsController");
         
-        //PlayAd();
+        PlayAd();
         levelDistance = (finish.transform.position.x - start.transform.position.x) / 100;        
     }
 

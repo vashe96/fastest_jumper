@@ -36,8 +36,7 @@ public class DeathCanvas : MonoBehaviour
 
     private void Update()
     {
-        //adReady = adsController.GetComponent<Ads>().isRewardedVideoReady(); //TODO!!
-        adReady = true;
+        adReady = adsController.GetComponent<Ads>().isRewardedVideoReady(); 
         if (adReady)
         { 
             ads.interactable = true;
@@ -61,11 +60,11 @@ public class DeathCanvas : MonoBehaviour
     }
     public void Ads()
     {
-        //if (adReady)
-        //{
-        //    adsController.GetComponent<Ads>().PlayRewardedVideoAd();
-        //    Time.timeScale = 0;
-        //}
+        if (adReady)
+        {
+            adsController.GetComponent<Ads>().PlayRewardedVideoAd();
+            Time.timeScale = 0;
+        }
         mainCanvas.SetActive(true);
         canvas.SetActive(false);
         player.transform.position = spawn.spawnPoint;

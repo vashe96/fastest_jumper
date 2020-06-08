@@ -57,6 +57,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13c54c2ca0f80545a7633187de69b5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 8709194196933515498, guid: 7ccd2f634c56e1b4a8e00d6507e2d394,
-    type: 3}
-  canvas: {fileID: 1981351629586854241, guid: 9934c46a83be30c48bb770a5df69a8c1, type: 3}
+  mainCanvas: {fileID: 0}
+  canvas: {fileID: 0}

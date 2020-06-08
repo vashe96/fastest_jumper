@@ -1572,7 +1572,7 @@ GameObject:
   - component: {fileID: 3873184108733478125}
   - component: {fileID: 3873184108733478099}
   - component: {fileID: 3873184108733478126}
-  - component: {fileID: 5545651679808487343}
+  - component: {fileID: 2014692231348720507}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1651,8 +1651,8 @@ MonoBehaviour:
     m_Bits: 256
   groundCheck: {fileID: 3873184108876825266}
   spawnPoint: {x: 0, y: 360, z: 0}
---- !u!135 &5545651679808487343
-SphereCollider:
+--- !u!136 &2014692231348720507
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1661,9 +1661,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.8699414
-  m_Center: {x: 0.05525869, y: 0.91045344, z: 0.012163758}
+  m_Radius: 0.3942156
+  m_Height: 2.0719051
+  m_Direction: 1
+  m_Center: {x: 0.005522549, y: 0.9417012, z: -2.2969006e-17}
 --- !u!1 &5175016594485133654
 GameObject:
   m_ObjectHideFlags: 0

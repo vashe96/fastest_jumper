@@ -24,10 +24,10 @@ public class PlatformAcceleration : MonoBehaviour
                     playerRB.velocity = new Vector3(0, 25, 0);
                     break;
                 case "medium":
-                    playerRB.velocity = new Vector3(0, 17.5f, 0);
+                    playerRB.velocity = new Vector3(0, 18, 0);
                     break;
                 case "slow":
-                    playerRB.velocity = new Vector3(0, 10, 0);
+                    playerRB.velocity = new Vector3(0, 14, 0);
                     break;
             }            
         }

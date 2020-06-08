@@ -68,27 +68,27 @@ public class LevelSelector : MonoBehaviour
 
     public void SetActiveButtons()
     {
-        if (PlayerPrefs.GetInt("LevelPassed") > 0)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 1)
             button2.interactable = true; 
-        if (PlayerPrefs.GetInt("LevelPassed") > 1)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 2)
             button3.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 2)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 3)
             button4.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 3)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 4)
             button5.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 4)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 5)
             button6.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 5)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 6)
             button7.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 6)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 7)
             button8.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 7)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 8)
             button9.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 8)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 9)
             button10.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 9)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 10)
             button11.interactable = true;
-        if (PlayerPrefs.GetInt("LevelPassed") > 10)
+        if (PlayerPrefs.GetInt("LevelPassed") >= 11)
             button12.interactable = true;
     }
 

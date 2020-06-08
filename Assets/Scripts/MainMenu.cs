@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     private void Update()
     {
+        Debug.Log(PlayerPrefs.GetInt("LevelPassed"));
         if (PlayerPrefs.GetInt("audio") == 0)
             ;
         else;

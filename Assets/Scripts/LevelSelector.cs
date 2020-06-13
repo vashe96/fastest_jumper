@@ -8,14 +8,22 @@ public class LevelSelector : MonoBehaviour
 {
     public Button button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12;
     public Sprite b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12;
+    public GameObject completed;
     private void Start()
     {
+        if (PlayerPrefs.GetInt("TutorialWatched") == 0)
+            SetTutorial();
         SetActiveButtons();
     }
 
     private void Update()
     {
         CheckBackButton();
+    }
+
+    public void SetTutorial()
+    {
+        SceneManager.LoadScene(14);
     }
 
     public void SetFirstLevel()
@@ -133,6 +141,10 @@ public class LevelSelector : MonoBehaviour
         { 
             button12.interactable = true; 
             button12.GetComponent<Image>().sprite = b12;
+        }
+        if (PlayerPrefs.GetInt("LevelPassed") >= 12)
+        {
+            completed.SetActive(true);
         }
     }
 

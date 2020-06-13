@@ -29,7 +29,7 @@ public class GameRules : MonoBehaviour
 
     void PlayAd()
     {
-        if ((PlayerPrefs.GetInt("Respawns") % 5) == 0 && 
+        if ((PlayerPrefs.GetInt("Respawns") % 7) == 0 && 
             (PlayerPrefs.GetInt("Respawns") > 0))
         {
             if (adsController.GetComponent<Ads>().isInterstitialReady())

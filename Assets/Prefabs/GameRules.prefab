@@ -46,4 +46,5 @@ MonoBehaviour:
   start: {fileID: 0}
   finish: {fileID: 0}
   player: {fileID: 0}
+  pauseCanvas: {fileID: 0}
   progressLevel: {fileID: 0}

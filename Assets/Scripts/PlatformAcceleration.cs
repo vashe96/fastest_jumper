@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformAcceleration : MonoBehaviour
 {
     GameObject player;
-    public string type;
+    public string type;   
 
     Rigidbody playerRB;
     void Start()

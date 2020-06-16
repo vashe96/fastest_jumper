@@ -3798,7 +3798,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mainCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3493629483507804921}
     - target: {fileID: 1981351629586854045, guid: 9934c46a83be30c48bb770a5df69a8c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4136,6 +4136,12 @@ MonoBehaviour:
 --- !u!1 &3493629483507804920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3493629483333930488, guid: e14074eb700906b4e93283b0a4928ad0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3493629483507804917}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3493629483507804921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3493629483892164484, guid: e14074eb700906b4e93283b0a4928ad0,
     type: 3}
   m_PrefabInstance: {fileID: 3493629483507804917}
   m_PrefabAsset: {fileID: 0}

@@ -2972,7 +2972,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mainCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3493629483507804920}
     - target: {fileID: 1981351629586854045, guid: 9934c46a83be30c48bb770a5df69a8c1,
         type: 3}
       propertyPath: m_LocalPosition.x

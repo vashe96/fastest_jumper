@@ -919,6 +919,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1981351629586854241, guid: 08b1621edc381324db8870cda0ed3825,
+        type: 3}
+      propertyPath: m_TagString
+      value: PauseCanvas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b1621edc381324db8870cda0ed3825, type: 3}
 --- !u!1001 &1197397771
@@ -1730,6 +1735,11 @@ PrefabInstance:
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 530786061}
+    - target: {fileID: 1981351629586854044, guid: 9934c46a83be30c48bb770a5df69a8c1,
+        type: 3}
+      propertyPath: pauseCanv
+      value: 
+      objectReference: {fileID: 2061289302}
     - target: {fileID: 1981351629586854045, guid: 9934c46a83be30c48bb770a5df69a8c1,
         type: 3}
       propertyPath: m_LocalPosition.x

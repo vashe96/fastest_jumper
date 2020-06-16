@@ -246,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCanvas: {fileID: 0}
   canvas: {fileID: 1981351629586854241}
+  pauseCanv: {fileID: 0}
   ads: {fileID: 1981351630371482251}
   On: {fileID: 21300000, guid: bb7428e01afb2c54bb2ef04177231538, type: 3}
   Off: {fileID: 21300000, guid: 153f3021c84dce74ba1b0938e655edba, type: 3}

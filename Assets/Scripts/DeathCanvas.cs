@@ -10,10 +10,11 @@ public class DeathCanvas : MonoBehaviour
 
     GameObject player;
     PlayerController spawn;
+    Rigidbody playerRB;
+
     public GameObject mainCanvas;
     public GameObject canvas;
-
-    
+    public GameObject pauseCanv;
 
     Death death;
     GameObject adsController;
@@ -32,13 +33,14 @@ public class DeathCanvas : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         spawn = player.GetComponent<PlayerController>();
+        playerRB = player.GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        adReady = adsController.GetComponent<Ads>().isRewardedVideoReady(); 
+        adReady = adsController.GetComponent<Ads>().isRewardedVideoReady();
         if (adReady)
-        { 
+        {
             ads.interactable = true;
             ads.GetComponent<Image>().sprite = On;
         }
@@ -68,6 +70,7 @@ public class DeathCanvas : MonoBehaviour
         mainCanvas.SetActive(true);
         canvas.SetActive(false);
         player.transform.position = spawn.spawnPoint;
-        death.AdWatched();           
+        playerRB.velocity = new Vector3(0, 0, 0);
+        pauseCanv.SetActive(true);
     }           
 }

@@ -2108,6 +2108,11 @@ PrefabInstance:
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 656047547}
+    - target: {fileID: 1981351629586854044, guid: 9934c46a83be30c48bb770a5df69a8c1,
+        type: 3}
+      propertyPath: pauseCanv
+      value: 
+      objectReference: {fileID: 1726247865}
     - target: {fileID: 1981351629586854045, guid: 9934c46a83be30c48bb770a5df69a8c1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -29,8 +29,6 @@ public class Death : MonoBehaviour
     public void AdWatched()
     {
         Time.timeScale = 1;
-        mainCanvas.SetActive(true);
-        canvas.SetActive(false);
         player.transform.position = spawn.spawnPoint;
     }
 }
